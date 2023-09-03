@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zyverse</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="root.css">
+  </head>
+  <body>
+    <div id="blob"><svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#F2F4F8" d="M56.9,-43.2C71.9,-26.7,80.8,-3.1,76.2,17.5C71.6,38.2,53.5,55.9,32.1,65.9C10.7,75.9,-14.1,78.3,-34.7,69.4C-55.3,60.5,-71.8,40.3,-76.1,18.3C-80.5,-3.8,-72.7,-27.8,-58,-44.3C-43.2,-60.8,-21.6,-69.9,-0.3,-69.6C21,-69.4,42,-59.8,56.9,-43.2Z" transform="translate(100 100)" />
+    </svg>
+    </div>
+    <div id="preloader">
+
+    <video src="images/preloader.mp4" id="bg-preloader" autoplay muted ></video>
+
+    </div>
+    <nav class="navbar">
+      <div class="links">
+        <a href="" class="link">Home</a>
+        <a href="new.html" class="link">About</a>
+        <a href="events.html" class="link">Event</a>
+        <a href="organisers.html" class="link">Organisers</a>
+        <a href="" class="link">Club</a>
+        <a href="" class="link">Register</a>
+      </div>
+    </nav>
+    <section class="main"><h1 data-value="Zyverse">Zyverse</h1></section>
+    <section class="details">
+      <div class="clock-container">
+        <h1 class="text">Event starts</h1>
+        <div id="countdown">
+          <div class="circle" style="--clr: #ff4c4c">
+            <svg>
+              <circle cx="80" cy="80" r="80"></circle>
+              <circle cx="80" cy="80" r="80" id="dd"></circle>
+            </svg>
+            <div id="days">00<br /><span>Days</span></div>
+          </div>
+
+          <div class="circle" style="--clr: #ffd700">
+            <svg>
+              <circle cx="80" cy="80" r="80"></circle>
+              <circle cx="80" cy="80" r="80" id="hh"></circle>
+            </svg>
+            <div id="hours">00<br /><span>Hours</span></div>
+          </div>
+
+          <div class="circle" style="--clr: #ffc0cb">
+            <svg>
+              <circle cx="80" cy="80" r="80"></circle>
+              <circle cx="80" cy="80" r="80" id="mm"></circle>
+            </svg>
+            <div id="minutes">00<br /><span>Minutes</span></div>
+          </div>
+
+          <div class="circle" style="--clr: #b0e0e6">
+            <svg>
+              <circle cx="80" cy="80" r="80"></circle>
+              <circle cx="80" cy="80" r="80" id="ss"></circle>
+            </svg>
+            <div id="seconds">00<br /><span>Seconds</span></div>
+          </div>
+        </div>
+      </div>
+      
+      </div>
+    </section>
+    <section class="footer">
+      
+    </section>
+  </body>
+  <script>
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    let interval = null;
+
+    document.querySelector("h1").onmouseover = (event) => {
+      let iteration = 0;
+
+      clearInterval(interval);
+
+      interval = setInterval(() => {
+        event.target.innerText = event.target.innerText
+          .split("")
+          .map((letter, index) => {
+            if (index < iteration) {
+              return event.target.dataset.value[index];
+            }
+
+            return letters[Math.floor(Math.random() * 26)];
+          })
+          .join("");
+
+        if (iteration >= event.target.dataset.value.length) {
+          clearInterval(interval);
+        }
+
+        iteration += 1 / 4;
+      }, 30);
+    };
+
+    let days = document.getElementById("days");
+    let hours = document.getElementById("hours");
+    let minutes = document.getElementById("minutes");
+    let seconds = document.getElementById("seconds");
+
+    let dd = document.getElementById("dd");
+    let hh = document.getElementById("hh");
+    let mm = document.getElementById("mm");
+    let ss = document.getElementById("ss");
+
+    let countdown = document.getElementById("countdown");
+    let wishDays = 10;
+
+    let x = setInterval(function () {
+      let currentYear = new Date().getFullYear();
+      let newYear = new Date(`Sep 23, ${currentYear} 00:00:00`);
+      let now = new Date().getTime();
+      let distance = newYear - now;
+
+      let d = Math.floor(distance / (1000 * 60 * 60 * 24));
+      let h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      let m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      let s = Math.floor((distance % (1000 * 60)) / 1000);
+
+      days.innerHTML = d + "<br><span>Days</span>";
+      hours.innerHTML = h + "<br><span>Hours</span>";
+      minutes.innerHTML = m + "<br><span>Minutes</span>";
+      seconds.innerHTML = s + "<br><span>Seconds</span>";
+
+      dd.style.strokeDashoffset = 440 - (440 * d) / 365;
+      hh.style.strokeDashoffset = 440 - (440 * h) / 24;
+      mm.style.strokeDashoffset = 440 - (440 * m) / 60;
+      ss.style.strokeDashoffset = 440 - (440 * s) / 60;
+
+      if (distance < 0) {
+        document.querySelector(
+          ".text"
+        ).innerText = `Happy New Year ${currentYear}`;
+      }
+    }, 1000);
+
+    document.getElementById('bg-preloader').addEventListener('ended', function() {
+        document.getElementById('preloader').style.display = 'none';
+
+    });
+
+
+const blob = document.getElementById("blob");
+
+window.onpointermove = event => { 
+  const { clientX, clientY } = event;
+  
+  blob.animate({
+    left: `${clientX}px`,
+    top: `${clientY}px`
+  }, { duration: 3000, fill: "forwards" });
+}
+
+  </script>
+</html>

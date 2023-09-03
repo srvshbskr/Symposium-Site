@@ -1,0 +1,320 @@
+
+#bg-preloader{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #0b0b0b;
+    z-index: 9999;
+
+}
+
+#blob{
+   position: absolute;
+   width: 78px;
+   filter: blur(30px);
+}
+
+.navbar{
+
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.links{
+
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.link{
+
+    color: var(--txt-color);
+    opacity: 60%;
+    height: 100%;
+    padding: 1.3em;
+    transition: all 350ms ease;
+    font-size: 1.25em;
+}
+
+.link:hover{
+
+    color:var(--accent-color);
+    opacity: 1;
+    transform: translateY(10px);
+
+}
+
+
+
+
+.main{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+
+}
+
+.main h1{
+    font-family: 'Handjet';
+    font-weight: 300;
+    font-size: 8em;
+    position: absolute;
+    top: 30%;
+    cursor: none;
+    transition: all 0.1s ease;
+    color: var(--txt-color);
+    border-radius: 0.1em;
+    padding: 1rem;
+}
+
+.main h1:hover{
+
+    background-color: #fff;
+    color: #0b0b0b;
+    border-radius: 0.1em;
+    padding: 1rem;
+
+}
+
+
+.details{
+
+    height: 100vh;
+}
+
+
+
+
+/* Second page */
+
+.details{
+
+    position: relative;
+
+
+}
+
+
+.container{
+
+    width: 50vw;
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0% 25vw;
+    margin-top: 15%;
+}
+
+   
+.diff{
+    color: var(--accent-color);
+    margin-left: 20px;
+
+}
+
+.left{
+    width: 25%;
+    height: 100%;
+    font-size: 3em;
+    position: relative;
+    font-family: 'Handjet';
+}
+
+.left::before{
+
+    content: '';
+    height: 40%;
+    top: 10%;
+    right: 103%;
+    width: 5px;
+    border-radius: 2px;
+    transform: rotate(-10deg);
+    background-color: #FFF;
+    position: absolute;
+    display: block;
+
+}
+
+.right{
+
+    height: 100%;
+    width: 45%;
+    /* border: 1px solid red; */
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    font-family: 'Orbitron';
+
+
+
+}
+
+/* events */
+
+
+
+
+@media screen and (max-width:768px) {
+
+    .navbar{
+        display: none;
+
+    }
+
+    .main h1{
+
+        color: var(--txt-color);
+        background-color: #0b0b0b;
+
+    }
+
+    .main{
+        height: 100vh;
+
+    }
+
+    .left{
+
+        width: 100%;
+        font-size: 2em;
+
+    }
+
+    .left::before{
+        top: 30%;
+        display: none;
+
+
+    }
+
+    .details{
+
+        height: 120vh;
+
+    }
+    
+    .container{
+        flex-direction: column;
+        position: absolute;
+        /* bottom: 0; */
+        margin: 20% 5vw;
+        width: 90vw;
+        height: 30%;
+
+    }
+
+    .right{
+        width: 100%;
+        margin-top: 5%;
+        font-size: 1em;
+        /* border: 1px solid red; */
+
+    }
+
+    .details{
+        height: 130vh;
+
+    }
+
+    .clock-container{
+        display: none;
+
+    }
+
+}
+
+
+
+
+
+.clock-container {
+    /* width: 100vw; */
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+  }
+  
+  .clock-container h1 {
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+  }
+  
+  #countdown {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2em;
+    /* background: rgba(255, 255, 255, 0.3); */
+    /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); */
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+  }
+  
+  #countdown .circle {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #countdown .circle svg {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    top: 10px;
+    /* transform: rotate(270deg); */
+    /* transform: translateY(10px); */
+    transform: translateX(10px);
+  }
+  
+  #countdown .circle svg circle {
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 8;
+    stroke: #444444;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+  }
+  
+  #countdown .circle svg circle:nth-child(2) {
+    stroke: var(--clr);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+  }
+  
+  #countdown div {
+    position: absolute;
+    text-align: center;
+    font-weight: 500;
+    color: #fff;
+    font-size: 1.5em;
+    line-height: 0.5em;
+  }
+  
+  #countdown div span {
+    font-size: 0.35em;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  
+  
+  
