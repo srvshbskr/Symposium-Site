@@ -63,11 +63,11 @@
 }
 
 .main h1{
-    font-family: 'Handjet';
+    font-family: 'Orbitron';
     font-weight: 300;
-    font-size: 8em;
+    font-size: 10em;
     position: absolute;
-    top: 30%;
+    top: 20%;
     cursor: none;
     transition: all 0.1s ease;
     color: var(--txt-color);
