@@ -103,11 +103,16 @@ justify-content: center;
     justify-content: flex-start;
     font-family: 'Orbitron';
     font-size: 6rem;
-    
+    color: white;
 }
 
 #sm{
     font-size: 5rem;
+
+}
+
+#sm-name{
+    font-size: 4.5rem;
 
 }
 
@@ -175,6 +180,19 @@ z-index: 3;
     /* left: 5%; */
     font-size: 1.8em;
     z-index: 4;
+    color: white;
+}
+
+.sm-glow{
+    position: absolute;
+    font-family: 'Orbitron';
+    font-weight: 700;
+    bottom: 8%;
+    left: 20%;
+    color: var(--accent-color);
+    /* opacity: 0%; */
+    font-size: 1em;
+    z-index: 4;
 }
 
 .glow::before,.glow::after{
@@ -193,9 +211,9 @@ z-index: 3;
 
 
 .button{
-    background-color: #1d1d1d;
+    background-color: var(--accent-color);
     padding: 1em;
-    color: var(--txt-clr);
+    color: var(--bg-color);
     border-radius: 1em;
     position: relative;
 }

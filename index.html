@@ -6,31 +6,37 @@
     <title>Zyverse</title>
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="root.css">
+    <link rel="stylesheet" href="organisers.css">
   </head>
   <body>
-    <div id="blob"><svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-      <path fill="#F2F4F8" d="M56.9,-43.2C71.9,-26.7,80.8,-3.1,76.2,17.5C71.6,38.2,53.5,55.9,32.1,65.9C10.7,75.9,-14.1,78.3,-34.7,69.4C-55.3,60.5,-71.8,40.3,-76.1,18.3C-80.5,-3.8,-72.7,-27.8,-58,-44.3C-43.2,-60.8,-21.6,-69.9,-0.3,-69.6C21,-69.4,42,-59.8,56.9,-43.2Z" transform="translate(100 100)" />
-    </svg>
-    </div>
+    
     <div id="preloader">
 
     <video src="images/preloader.mp4" id="bg-preloader" autoplay muted ></video>
 
     </div>
-    <nav class="navbar">
-      <div class="links">
-        <a href="" class="link">Home</a>
-        <a href="new.html" class="link">About</a>
-        <a href="events.html" class="link">Event</a>
-        <a href="organisers.html" class="link">Organisers</a>
-        <a href="" class="link">Club</a>
-        <a href="" class="link">Register</a>
-      </div>
-    </nav>
-    <section class="main"><h1 data-value="Zyverse">Zyverse</h1></section>
+      <nav class="navbar">
+        <div class="links">
+          <a href="index.html" class="link">Home</a>
+          <a href="events.html" class="link">Event</a>
+          <a href="organisers.html" class="link">The Team</a>
+          <a href="contact.html" class="link">Contact</a>
+          <a href="about.html" class="link">About</a>
+          <a href="" class="link">Register</a>
+        </div>
+      </nav>
+    <section class="main">
+      <video class="bg-video" autoplay muted loop>
+        <source src="images/home-secion.mp4" type="video/mp4">
+
+      </video>
+      <img src="images/logo.jpeg" class="img-logo" alt="" srcset="">
+      <h1 data-value="Zyverse">Zyverse</h1>
+      <p class="index-desc">A national level technical Symposium </p>
+    </section>
     <section class="details">
       <div class="clock-container">
-        <h1 class="text">Event starts</h1>
+        <h1 class="text">The Symposium  starts in</h1>
         <div id="countdown">
           <div class="circle" style="--clr: #ff4c4c">
             <svg>
@@ -43,7 +49,7 @@
           <div class="circle" style="--clr: #ffd700">
             <svg>
               <circle cx="80" cy="80" r="80"></circle>
-              <circle cx="80" cy="80" r="80" id="hh"></circle>
+              <circle cx="80" cy="80" r="80" id="dd"></circle>
             </svg>
             <div id="hours">00<br /><span>Hours</span></div>
           </div>
@@ -51,7 +57,7 @@
           <div class="circle" style="--clr: #ffc0cb">
             <svg>
               <circle cx="80" cy="80" r="80"></circle>
-              <circle cx="80" cy="80" r="80" id="mm"></circle>
+              <circle cx="80" cy="80" r="80" id="dd"></circle>
             </svg>
             <div id="minutes">00<br /><span>Minutes</span></div>
           </div>
@@ -59,8 +65,8 @@
           <div class="circle" style="--clr: #b0e0e6">
             <svg>
               <circle cx="80" cy="80" r="80"></circle>
-              <circle cx="80" cy="80" r="80" id="ss"></circle>
-            </svg>
+              <circle cx="80" cy="80" r="80" id="dd"></circle>
+            </svg>  
             <div id="seconds">00<br /><span>Seconds</span></div>
           </div>
         </div>
@@ -68,9 +74,79 @@
       
       </div>
     </section>
-    <section class="footer">
+    <h1 class="home-title">Technical Events</h1>
+    
+    <section class="technical-event">
       
+      <div class="index-left">
+
+        <img src="images/technical-event.jpg"   alt="" srcset="">
+      </div>
+      
+      <div class="index-right">
+
+        <p class="event-index-desc">
+  
+          Our college hosts various competitions for students to showcase technical skills. 
+          Competitions such as Technical quiz, drone racing, water rocketry etc., cater to different interests and skill levels, offering a chance to network and gain experience for future careers. Competitions award prizes and offer a fun, supportive environment for students from different academic backgrounds.
+      
+      
+          </p>
+
+        <a href="events.html" class="index-btn">Events</a>
+          
+  
+      </div>
     </section>
+    <h1 class="home-title">Non-Technical Events</h1>
+    <section class="technical-event" id="non">
+      
+      <div class="index-left">
+        <img src="images/non-technical-event.png"  alt="" srcset="">
+
+      </div>
+      
+      <div class="index-right">
+
+        <p class="event-index-desc">
+  
+          Our college hosts various competitions for students to showcase technical skills. 
+          Competitions such as Technical quiz, drone racing, water rocketry etc., cater to different interests and skill levels, offering a chance to network and gain experience for future careers. Competitions award prizes and offer a fun, supportive environment for students from different academic backgrounds.
+      
+      
+          </p>
+        <a href="events.html" class="index-btn">Events</a>
+        
+  
+      </div>
+    </section>
+    <section class="map">
+      <h1 class="home-title" id="frame-title">Location</h1>
+      <div class="iframe">
+        <a href="https://www.google.co.in/maps/place/SRM+Valliammai+Engineering+College/@12.8259881,80.0411421,19.48z/data=!4m6!3m5!1s0x3a52f70d79722631:0x49afcd4648f94894!8m2!3d12.8259442!4d80.0413128!16s%2Fm%2F076ybnz?entry=ttu" target="_blank"><img src="images/Loc.jpeg" alt="" class="link-img"></a>
+   
+      </div>
+    </section>
+    <footer>
+      <div class="meida-links">
+        <a href=""
+          ><img src="images/instagram.png" alt="" style="width: 2rem"
+        /></a>
+        <a href=""
+          ><img src="images/facebook.png" alt="" style="width: 2rem"
+        /></a>
+        <a href=""
+          ><img src="images/linkedin.png" alt="" style="width: 2rem"
+        /></a>
+        <a href=""><img src="images/gmail.png" alt="" style="width: 2rem" /></a>
+        <a href=""
+          ><img src="images/phone-call.png" alt="" style="width: 2rem"
+        /></a>
+      </div>
+    </footer>
+
+    <p id="copyright">&copy; All Rights Reserved</p>
+
   </body>
   <script>
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -143,10 +219,7 @@
       }
     }, 1000);
 
-    document.getElementById('bg-preloader').addEventListener('ended', function() {
-        document.getElementById('preloader').style.display = 'none';
-
-    });
+   
 
 
 const blob = document.getElementById("blob");
@@ -159,6 +232,13 @@ window.onpointermove = event => {
     top: `${clientY}px`
   }, { duration: 3000, fill: "forwards" });
 }
+
+function preloader() {
+            let preloader = document.getElementById("preloader");
+            preloader.style.transition = "all 1s";
+            preloader.style.display = "none";
+        }
+        setTimeout(preloader, 1000);
 
   </script>
 </html>

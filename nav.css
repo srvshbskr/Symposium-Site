@@ -1,0 +1,37 @@
+
+.navbar{
+    
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.links{
+    
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+.link{
+    
+    color: var(--txt-color);
+    opacity: 60%;
+    height: 100%;
+    padding: 1.3em;
+    transition: all 350ms ease;
+    font-size: 1.25em;
+}
+
+.link:hover{
+    
+    color:var(--accent-color);
+    opacity: 1;
+    transform: translateY(10px);
+    
+}
+

@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech+Mono&display=swap');
+:root {
+  --br: 20px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  background: #000000;
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+}
+.container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  gap: 70px;
+  flex-flow: wrap;
+  justify-content: center;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.card {
+  width: 240px;
+  background: var(--bg-color);
+  padding: 15px;
+  border-radius: var(--br);
+  transition: 0.5s;
+  color: #fff;
+  border: 2px solid grey;
+  
+}
+.card:hover {
+  box-shadow: 0px 3px 10px 5px #464646;
+}
+.card img {
+  max-width: 100%;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  border: 4px solid var(--bc, #000);
+}
+h1 {
+  margin: 70px 0;
+  color: white;
+  position: relative;
+  font-family: 'Bebas Neue';
+  letter-spacing: 5px;
+}
+h2 {
+  margin: 15px 0 5px;
+}
+.card .role {
+  font-size: 80%;
+  color: #444;
+  margin-bottom: 20px;
+}
+.card a {
+  background: var(--btn, #000);
+  color: #fff;
+  padding: 10px 15px;
+  width: 100%;
+  display: block;
+  border-radius: var(--br);
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+@media (max-width: 767px) {
+  .row {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .card {
+    flex: 0 0 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 420px) {
+  .card {
+    flex: 0 0 calc(100% - 20px);
+    max-width: calc(100% - 20px);
+  }
+}
+

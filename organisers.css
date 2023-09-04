@@ -1,15 +1,15 @@
 h1 {
     text-align: center;
-    color: var(--accent-color);
+    /* color: var(--accent-color); */
     font-family: var(--rubik-font);
     font-size: 2.5rem;
     transition: all .7s;
     margin-top: 10rem;
 }
 
-#firsth1 {
+#first h1 {
     margin-top: 10vh;
-    color: var(--accent-color);
+    /* color: var(--accent-color); */
 }
 
 .line {
@@ -22,14 +22,13 @@ h1 {
 .card {
     width: 18rem;
     height: 23rem;
-    background-color: rgba(0, 0, 0, 0.99);
+    background-color: #0b0b0b;
     border-radius: .7rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     /* gap: 2rem; */
-    box-shadow: var(--shadow);
     transition: all 0.7s;
 }
 
@@ -82,15 +81,6 @@ h1 {
     margin: 0;
 }
 
-footer {
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    align-items: center;
-    margin: 5rem auto;
-    color: var(--red-color);
-    margin-bottom: 0;
-}
 
 .event-name-dept {
     display: flex;
@@ -125,10 +115,4 @@ footer {
         flex-direction: column;
         gap: 5rem;
     }
-}
-
-#copyright {
-    text-align: center;
-    color: whitesmoke;
-    margin: 2rem;
 }
