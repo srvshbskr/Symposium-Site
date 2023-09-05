@@ -279,7 +279,6 @@ background-position: 0% -100%;
 
     #first .event-container{
 
-        border: 1px solid blue;
         margin-top: 10vh;
         height: 100%;
         flex-direction: column-reverse;
@@ -327,6 +326,96 @@ background-position: 0% -100%;
         font-size: 1.2rem;
         width: 100%;
 
+    }
+    .event-sec{
+
+        height: 130vh;
+
+    }
+    
+
+    .event-container#event-card-left{
+
+        flex-direction: column-reverse;
+
+    }
+    #event-card-left .event-left{
+
+        transform: translateX(0);    
+        
+    }
+        
+
+    .event-container{
+
+        margin-top: 10vh;
+        height: 100%;
+        flex-direction: column-reverse;
+        /* justify-content: space-between; */
+        align-items: center;
+        position: relative;
+    }
+    .event-container .title{
+        left: 0;
+        top: 0;
+        font-size: 2rem;
+        width: 100%;
+     }
+    .event-container .event-right{
+        margin-top: 30%;
+        width: 100%;
+
+    }
+
+    .event-container .event-right .card{
+
+        height: 100%;
+        width: 80%;
+        
+
+    }
+
+    .event-container .event-right .card .glow{
+        font-size: 1.3rem;
+    }
+
+    .event-container .event-left {
+    
+        width: 100%;
+    }
+
+    .event-container .event-left .event-name{
+
+        font-size: 2rem;
+
+    }
+
+    .event-container .event-left .description{
+
+        font-size: 1.2rem;
+        width: 100%;
+
+    }
+
+    #sm-name{
+
+        font-size: 2.5rem;
+
+    }
+
+    .btn{
+        margin-top: 5%;
+
+    }
+
+    .event-container::before{
+
+        content: '';
+        height: 4px;
+        border-radius: 2px;
+        width: 100%;
+        background-color: aliceblue;
+        opacity: 30%;
     }
 
     

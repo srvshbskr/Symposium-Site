@@ -5,126 +5,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zyverse</title>
     <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="root.css">
-    <link rel="stylesheet" href="organisers.css">
+    <link rel="stylesheet" href="root.css" />
+    <link rel="stylesheet" href="organisers.css" />
+    <link rel="stylesheet" href="clock.css" />
   </head>
   <body>
-    
     <div id="preloader">
-
-    <video src="images/preloader.mp4" id="bg-preloader" autoplay muted ></video>
-
+      <video
+        src="images/preloader.mp4"
+        id="bg-preloader"
+        autoplay
+        muted
+      ></video>
     </div>
-      <nav class="navbar">
-        <div class="links">
-          <a href="index.html" class="link">Home</a>
-          <a href="events.html" class="link">Event</a>
-          <a href="organisers.html" class="link">The Team</a>
-          <a href="contact.html" class="link">Contact</a>
-          <a href="about.html" class="link">About</a>
-          <a href="" class="link">Register</a>
-        </div>
-      </nav>
-    <section class="main">
+    <nav class="navbar">
+      <div class="nav-title">Zyverse</div>
+      <div class="links">
+        <a href="index.html" class="link">Home</a>
+        <a href="events.html" class="link">Event</a>
+        <a href="organisers.html" class="link">The Team</a>
+        <a href="contact.html" class="link">Contact</a>
+        <a href="about.html" class="link">About</a>
+        <a href="" class="link">Register</a>
+      </div>
+      <div class="cross">
+        <img
+          src="images/menu_FILL0_wght400_GRAD0_opsz24.svg"
+          alt=""
+          srcset=""
+          class="menu"
+        />
+      </div>
+    </nav>
+    <div class="video">
       <video class="bg-video" autoplay muted loop>
-        <source src="images/home-secion.mp4" type="video/mp4">
-
+        <source src="images/home-secion.mp4" type="video/mp4" />
       </video>
-      <img src="images/logo.jpeg" class="img-logo" alt="" srcset="">
+    </div>
+    <section class="main">
+      <img src="images/logo.jpeg" class="img-logo" alt="" srcset="" />
       <h1 data-value="Zyverse">Zyverse</h1>
-      <p class="index-desc">A national level technical Symposium </p>
+      <p class="index-desc">A national level technical Symposium</p>
     </section>
     <section class="details">
-      <div class="clock-container">
-        <h1 class="text">The Symposium  starts in</h1>
-        <div id="countdown">
-          <div class="circle" style="--clr: #ff4c4c">
-            <svg>
-              <circle cx="80" cy="80" r="80"></circle>
-              <circle cx="80" cy="80" r="80" id="dd"></circle>
-            </svg>
-            <div id="days">00<br /><span>Days</span></div>
-          </div>
-
-          <div class="circle" style="--clr: #ffd700">
-            <svg>
-              <circle cx="80" cy="80" r="80"></circle>
-              <circle cx="80" cy="80" r="80" id="dd"></circle>
-            </svg>
-            <div id="hours">00<br /><span>Hours</span></div>
-          </div>
-
-          <div class="circle" style="--clr: #ffc0cb">
-            <svg>
-              <circle cx="80" cy="80" r="80"></circle>
-              <circle cx="80" cy="80" r="80" id="dd"></circle>
-            </svg>
-            <div id="minutes">00<br /><span>Minutes</span></div>
-          </div>
-
-          <div class="circle" style="--clr: #b0e0e6">
-            <svg>
-              <circle cx="80" cy="80" r="80"></circle>
-              <circle cx="80" cy="80" r="80" id="dd"></circle>
-            </svg>  
-            <div id="seconds">00<br /><span>Seconds</span></div>
-          </div>
+      <div class="home-title" id="clock-title">The Symposium starts in</div>
+      <div id="time">
+        <div class="circle" style="--clr: #ff2972">
+          <div class="dots day_dot"></div>
+          <svg>
+            <circle cx="70" cy="70" r="70"></circle>
+            <circle cx="70" cy="70" r="70" id="dd"></circle>
+          </svg>
+          <div id="days">00<br /><span>Days</span></div>
+        </div>
+        <div class="circle" style="--clr: #fff">
+          <div class="dots hr_dot"></div>
+          <svg>
+            <circle cx="70" cy="70" r="70"></circle>
+            <circle cx="70" cy="70" r="70" id="hh"></circle>
+          </svg>
+          <div id="hours">00</div>
+        </div>
+        <div class="circle" style="--clr: #fee800">
+          <div class="dots min_dot"></div>
+          <svg>
+            <circle cx="70" cy="70" r="70"></circle>
+            <circle cx="70" cy="70" r="70" id="mm"></circle>
+          </svg>
+          <div id="minutes">00</div>
+        </div>
+        <div class="circle" style="--clr: #04fc43">
+          <div class="dots sec_dot"></div>
+          <svg>
+            <circle cx="70" cy="70" r="70"></circle>
+            <circle cx="70" cy="70" r="70" id="ss"></circle>
+          </svg>
+          <div id="seconds">00</div>
         </div>
       </div>
-      
-      </div>
     </section>
-    <h1 class="home-title">Technical Events</h1>
-    
+
     <section class="technical-event">
-      
-      <div class="index-left">
+      <h1 class="home-title">Technical Events</h1>
 
-        <img src="images/technical-event.jpg"   alt="" srcset="">
-      </div>
-      
-      <div class="index-right">
+      <div class="index-row">
+        <div class="index-left">
+          <img
+            src="images/technical-event.jpg"
+            class="tech-img"
+            alt=""
+            srcset=""
+          />
+        </div>
 
-        <p class="event-index-desc">
-  
-          Our college hosts various competitions for students to showcase technical skills. 
-          Competitions such as Technical quiz, drone racing, water rocketry etc., cater to different interests and skill levels, offering a chance to network and gain experience for future careers. Competitions award prizes and offer a fun, supportive environment for students from different academic backgrounds.
-      
-      
+        <div class="index-right">
+          <p class="event-index-desc">
+            Our college hosts various competitions for students to showcase
+            technical skills. Competitions such as Technical quiz, drone racing,
+            water rocketry etc., cater to different interests and skill levels,
+            offering a chance to network and gain experience for future careers.
+            Competitions award prizes and offer a fun, supportive environment
+            for students from different academic backgrounds.
           </p>
 
-        <a href="events.html" class="index-btn">Events</a>
-          
-  
+          <a href="events.html" class="index-btn">Events</a>
+        </div>
       </div>
     </section>
-    <h1 class="home-title">Non-Technical Events</h1>
     <section class="technical-event" id="non">
-      
-      <div class="index-left">
-        <img src="images/non-technical-event.png"  alt="" srcset="">
+      <h1 class="home-title">Non-Technical Events</h1>
 
-      </div>
-      
-      <div class="index-right">
+      <div class="index-row">
+        <div class="index-left">
+          <img
+            src="images/non-technical-event.png"
+            class="tech-img"
+            alt=""
+            srcset=""
+          />
+        </div>
 
-        <p class="event-index-desc">
-  
-          Our college hosts various competitions for students to showcase technical skills. 
-          Competitions such as Technical quiz, drone racing, water rocketry etc., cater to different interests and skill levels, offering a chance to network and gain experience for future careers. Competitions award prizes and offer a fun, supportive environment for students from different academic backgrounds.
-      
-      
+        <div class="index-right">
+          <p class="event-index-desc">
+            Our college hosts various competitions for students to showcase
+            technical skills. Competitions such as Technical quiz, drone racing,
+            water rocketry etc., cater to different interests and skill levels,
+            offering a chance to network and gain experience for future careers.
+            Competitions award prizes and offer a fun, supportive environment
+            for students from different academic backgrounds.
           </p>
-        <a href="events.html" class="index-btn">Events</a>
-        
-  
+          <a href="events.html" class="index-btn">Events</a>
+        </div>
       </div>
     </section>
     <section class="map">
       <h1 class="home-title" id="frame-title">Location</h1>
       <div class="iframe">
-        <a href="https://www.google.co.in/maps/place/SRM+Valliammai+Engineering+College/@12.8259881,80.0411421,19.48z/data=!4m6!3m5!1s0x3a52f70d79722631:0x49afcd4648f94894!8m2!3d12.8259442!4d80.0413128!16s%2Fm%2F076ybnz?entry=ttu" target="_blank"><img src="images/Loc.jpeg" alt="" class="link-img"></a>
-   
+        <h3>Access the location by tapping at the image</h3>
+        <a
+          href="https://www.google.co.in/maps/place/SRM+Valliammai+Engineering+College/@12.8259881,80.0411421,19.48z/data=!4m6!3m5!1s0x3a52f70d79722631:0x49afcd4648f94894!8m2!3d12.8259442!4d80.0413128!16s%2Fm%2F076ybnz?entry=ttu"
+          target="_blank"
+          ><img src="images/Loc.jpeg" alt="" class="link-img"
+        /></a>
       </div>
     </section>
     <footer>
@@ -146,7 +168,6 @@
     </footer>
 
     <p id="copyright">&copy; All Rights Reserved</p>
-
   </body>
   <script>
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -188,20 +209,22 @@
     let mm = document.getElementById("mm");
     let ss = document.getElementById("ss");
 
-    let countdown = document.getElementById("countdown");
-    let wishDays = 10;
+    let day_dot = document.querySelector(".day_dot");
+    let hr_dot = document.querySelector(".hr_dot");
+    let min_dot = document.querySelector(".min_dot");
+    let sec_dot = document.querySelector(".sec_dot");
 
+    let endDate = "09/23/2023 00:00:00";
     let x = setInterval(function () {
-      let currentYear = new Date().getFullYear();
-      let newYear = new Date(`Sep 23, ${currentYear} 00:00:00`);
-      let now = new Date().getTime();
-      let distance = newYear - now;
+      let now = new Date(endDate).getTime();
+      let countDown = new Date().getTime();
+      let distance = now - countDown;
 
       let d = Math.floor(distance / (1000 * 60 * 60 * 24));
       let h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       let m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      let s = Math.floor((distance % (1000 * 60)) / 1000);
 
+      let s = Math.floor((distance % (1000 * 60)) / 1000);
       days.innerHTML = d + "<br><span>Days</span>";
       hours.innerHTML = h + "<br><span>Hours</span>";
       minutes.innerHTML = m + "<br><span>Minutes</span>";
@@ -212,33 +235,37 @@
       mm.style.strokeDashoffset = 440 - (440 * m) / 60;
       ss.style.strokeDashoffset = 440 - (440 * s) / 60;
 
+      day_dot.style.transform = `rotateZ(${d * 0.986}deg`;
+      hr_dot.style.transform = `rotateZ(${h * 15}deg`;
+      min_dot.style.transform = `rotateZ(${m * 6}deg`;
+      sec_dot.style.transform = `rotateZ(${s * 6}deg`;
+
       if (distance < 0) {
-        document.querySelector(
-          ".text"
-        ).innerText = `Happy New Year ${currentYear}`;
+        clearInterval(x);
+        document.getElementById("time").style.display = "none";
+        document.querySelector(".newYear").style.display = "block";
       }
-    }, 1000);
+    });
 
-   
+    const blob = document.getElementById("blob");
 
+    window.onpointermove = (event) => {
+      const { clientX, clientY } = event;
 
-const blob = document.getElementById("blob");
+      blob.animate(
+        {
+          left: `${clientX}px`,
+          top: `${clientY}px`,
+        },
+        { duration: 3000, fill: "forwards" }
+      );
+    };
 
-window.onpointermove = event => { 
-  const { clientX, clientY } = event;
-  
-  blob.animate({
-    left: `${clientX}px`,
-    top: `${clientY}px`
-  }, { duration: 3000, fill: "forwards" });
-}
-
-function preloader() {
-            let preloader = document.getElementById("preloader");
-            preloader.style.transition = "all 1s";
-            preloader.style.display = "none";
-        }
-        setTimeout(preloader, 1000);
-
+    function preloader() {
+      let preloader = document.getElementById("preloader");
+      preloader.style.transition = "all 1s";
+      preloader.style.display = "none";
+    }
+    setTimeout(preloader, 9000);
   </script>
 </html>
