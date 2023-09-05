@@ -18,25 +18,26 @@
         muted
       ></video>
     </div>
-    <nav class="navbar">
-      <div class="nav-title">Zyverse</div>
-      <div class="links">
-        <a href="index.html" class="link">Home</a>
-        <a href="events.html" class="link">Event</a>
-        <a href="organisers.html" class="link">The Team</a>
-        <a href="contact.html" class="link">Contact</a>
-        <a href="about.html" class="link">About</a>
-        <a href="" class="link">Register</a>
-      </div>
-      <div class="cross">
-        <img
-          src="images/menu_FILL0_wght400_GRAD0_opsz24.svg"
-          alt=""
-          srcset=""
-          class="menu"
-        />
-      </div>
-    </nav>
+    <header>
+      <nav>
+        <h2 id="logo-image">LOGO</h2>
+        <div class="mob-view" id="mob-view">
+          <div class="mob-view-line"></div>
+          <div class="mob-view-line"></div>
+          <div class="mob-view-line"></div>
+        </div>
+        <div class="links" id="mob-view-links">
+          <a href="index.html" class="link">Home</a>
+          <a href="events.html" class="link">Event</a>
+          <a href="organisers.html" class="link">The Team</a>
+          <a href="contact.html" class="link">Contact</a>
+          <a href="about.html" class="link">About</a>
+          <a href="http://tinyurl.com/ya45ty4w" target="_blank" class="link"
+            >Register</a
+          >
+        </div>
+      </nav>
+    </header>
     <div class="video">
       <video class="bg-video" autoplay muted loop>
         <source src="images/home-secion.mp4" type="video/mp4" />
@@ -91,7 +92,7 @@
       <div class="index-row">
         <div class="index-left">
           <img
-            src="images/technical-event.jpg"
+            src="images/undraw_programming_re_kg9v.svg"
             class="tech-img"
             alt=""
             srcset=""
@@ -115,11 +116,12 @@
     <section class="technical-event" id="non">
       <h1 class="home-title">Non-Technical Events</h1>
 
-      <div class="index-row">
+      <div class="index-row" id="reverse">
         <div class="index-left">
           <img
-            src="images/non-technical-event.png"
+            src="images/undraw_gaming_re_cma2.svg"
             class="tech-img"
+            id="non-img"
             alt=""
             srcset=""
           />
@@ -158,10 +160,14 @@
           ><img src="images/icons8-facebook.svg" alt="" class="filter"
         /></a>
         <a href=""
-          ><img src="images/icons8-linked-in.svg" alt="" class="filter"
+          ><img src="images/icons8-linked-in.svg" id="linked" class="filter"
         /></a>
         <a href=""
-          ><img src="images/icons8-phone-24.png" alt="" class="filter"
+          ><img
+            src="images/discord-icon-svgrepo-com.svg"
+            alt=""
+            id="dis"
+            class="filter"
         /></a>
       </div>
 
@@ -264,7 +270,15 @@
       let preloader = document.getElementById("preloader");
       preloader.style.transition = "all 1s";
       preloader.style.display = "none";
+
+      let glow = document.getElementsByClassName("details");
+      glow.style.display = "none";
     }
-    setTimeout(preloader, 10000);
+    setTimeout(preloader, 9000);
+    let mobileviewline = document.getElementById("mob-view");
+    mobileviewline.ontouchstart = function () {
+      let navbar = document.querySelector(".links");
+      navbar.classList.toggle("active");
+    };
   </script>
 </html>

@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: flex-end;
     gap: 30px;
-    height: 50%;
+    height: 80%;
 }
 
 #time .circle{
@@ -148,7 +148,7 @@
         transform: scale(0.5);
         justify-content: flex-start;
         align-items: flex-start;
-        width: 40%;
+        width: 20%;
     }
 
 

@@ -217,17 +217,6 @@ z-index: 3;
     border-radius: 1em;
     position: relative;
 }
-    
-.button::before{
-   content: '';
-   position: absolute;
-   inset: 0px;
-   background: linear-gradient(var(--gradient-angle),lightcoral, lightblue,lightcoral);
-   z-index: 20;
-   border-radius: inherit;
-   /* filter: blur(5px); */
-   animation: rotation 4s linear infinite;
-}
 
 @keyframes rotation{
 
@@ -417,11 +406,20 @@ background-position: 0% -100%;
         background-color: aliceblue;
         opacity: 30%;
     }
+}
 
+@media screen and (min-width:1080px) {
+
+    .glow{
+        font-size: 1.5rem;
+        width: 100%;
+
+
+    }
+
+    #event-card-left{
+        transform: translateX(-50px);
+
+    }
     
-
-
-
-
-
 }
