@@ -116,5 +116,13 @@
 
       <p id="copyright">&copy; All Rights Reserved</p>
     </footer>
+
+    <script>
+      let mobileviewline = document.getElementById("mob-view");
+      mobileviewline.ontouchstart = function () {
+        let navbar = document.querySelector(".links");
+        navbar.classList.toggle("active");
+      };
+    </script>
   </body>
 </html>
