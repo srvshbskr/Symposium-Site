@@ -6,9 +6,9 @@ This is a website created for a college symposium using HTML, CSS, and JavaScrip
 
 The website was developed by a team of three developers as part of the college symposium organizing committee:
 
-- [Your Name](link-to-your-github): Describe your contribution and role in the project.
-- [Developer 2 Name](link-to-dev2-github): Mention their contribution and role in the project.
-- [Developer 3 Name](link-to-dev3-github): Describe their contribution and role in the project.
+- Sarvesh Baskar (myself): I was responsible for the event page's markup and styling and added functionality through javascript .
+- [Arulkumaran](link-to-dev2-github): Contributed to rest of the pages in the website . 
+- [Sivasankar](link-to-dev3-github): added functionalities to the website through javascirpt.
 
 ## Features
 
