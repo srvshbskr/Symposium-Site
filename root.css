@@ -69,14 +69,6 @@ footer {
 
 }
 
-#bottom{
-
-    position: absolute;
-    bottom: 0;
-    width: 100vw;
-
-}
-
 
 
 
@@ -158,13 +150,14 @@ header nav .links {
     }
     header nav .links {
         position: absolute;
-        top: 60px;
-        height: 0;
+        top: 50px;
+        height: 100px;
         overflow: hidden;
         left: 20%;
         right: 0;
         transition: .2s;
         z-index: 100;
+        padding: 1em;
         display: flex;
         flex-direction: column;
         align-items: center;
