@@ -38,5 +38,5 @@ Special thanks to the entire team for their dedication and hard work in developi
 
 ## Screenshots
 
-![Screenshot 1](screenshots/symposium-screenshot1.png)
-![Screenshot 2](screenshots/symposium-screenshot2.png)
+![Screenshot 1](screenshots/screenshot1.png)
+![Screenshot 2](screenshots/screenshot2.png)
